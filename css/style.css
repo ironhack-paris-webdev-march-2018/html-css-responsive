@@ -1,0 +1,78 @@
+/*
+ * Default CSS (global stuff & small screen)
+ * -----------------------------------------
+ */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.green-box,
+.black-box,
+.red-box {
+  box-sizing: border-box;
+}
+
+.green-box {
+  background-color: lawngreen;
+}
+.black-box {
+  border: 5px solid black;
+}
+.red-box {
+  background-color: crimson;
+  color: white;
+}
+
+nav,
+.green-box {
+  display: none;
+}
+
+
+/*
+ * Medium CSS
+ * ----------
+ */
+@media (min-width: 768px) {
+  nav {
+    display: block;
+  }
+  nav a {
+    margin-right: 20px;
+  }
+
+  .wrapper {
+    overflow: auto;
+  }
+
+  .black-box,
+  .red-box {
+    float: left;
+  }
+  .black-box {
+    width: 75%;
+  }
+  .red-box {
+    width: 25%;
+  }
+}
+
+/*
+ * Large CSS
+ * ----------
+ */
+@media (min-width: 1200px) {
+  body {
+    background-image: url(../bg.jpg);
+  }
+
+  .green-box {
+    display: block;
+    float: left;
+    width: 25%;
+  }
+
+  .black-box {
+    width: 50%;
+  }
+}
